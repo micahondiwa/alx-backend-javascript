@@ -1,6 +1,6 @@
 export default function taskBlock(trueOrFalse) {
-  let task;
-  let task2;
+  var task;
+  var task2;
 
   if (trueOrFalse) {
     task = true;
