@@ -7,7 +7,7 @@ export default async function handleProfileSignup(
   fileName,
 ) {
   const userData = await signUpUser(firstName, lastName).then((data) => ({
-    status: 'fulfiled',
+    status: 'fulfilled',
     value: data,
   }));
 
