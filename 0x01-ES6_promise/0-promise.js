@@ -1,3 +1,7 @@
-const getResponseFromAPI = new Promise((resolve, reject) => 
-const reponse = getResponseFromAPI();
-console.log('response instance of Promise'););
+function getResponseFromAPI() {
+  return Promise((resolve, reject) => {
+    fetch('http://api.example.com/data').then((response) => {
+      resolve(response.json());
+    });
+  });
+}
