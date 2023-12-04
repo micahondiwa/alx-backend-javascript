@@ -6,7 +6,7 @@ export default class Currency {
   }
 
   get name() {
-    return this._namel;
+    return this._name;
   }
 
   set name(value) {
