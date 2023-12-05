@@ -3,7 +3,7 @@ import Building from './5-building';
 
 export default class SkyHighBuilding extends Building {
   constructor(sqft, floors) {
-    this._sqft = sqft;
+    super(sqft);
     this._floors = floors;
   }
 
