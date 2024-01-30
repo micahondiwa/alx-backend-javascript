@@ -4,7 +4,7 @@
  * @author Micah Ondiwa <https://github.com/micahondiwa>
  */
 const displayMessage = (msg) => {
-    console.log(msg);
+  console.log(msg);
 };
 
 module.exports = displayMessage;
