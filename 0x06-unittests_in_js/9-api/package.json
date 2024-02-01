@@ -1,41 +1,34 @@
-const request = require('request');
-const { expect
-} = require('chai');
-
-describe('API integration test', () => {
-  const API_URL = 'http: //localhost:7865';
-
-  it('GET / returns correct response', (done) => {
-    request.get(`${API_URL
-        }/`, (_err, res, body) => {
-      expect(res.statusCode).to.be.equal(200);
-      expect(body).to.be.equal('Welcome to the payment system');
-      done();
-        });
-    });
-
-  it('GET /cart/:id returns correct response for valid :id', (done) => {
-    request.get(`${API_URL
-        }/cart/47`, (_err, res, body) => {
-      expect(res.statusCode).to.be.equal(200);
-      expect(body).to.be.equal('Payment methods for cart 47');
-      done();
-        });
-    });
-
-  it('GET /cart/:id returns 404 response for negative number values in :id', (done) => {
-    request.get(`${API_URL
-        }/cart/-47`, (_err, res, _body) => {
-      expect(res.statusCode).to.be.equal(404);
-      done();
-        });
-    });
-
-  it('GET /cart/:id returns 404 response for non-numeric values in :id', (done) => {
-    request.get(`${API_URL
-        }/cart/d200-44a5-9de6`, (_err, res, _body) => {
-      expect(res.statusCode).to.be.equal(404);
-      done();
-        });
-    });
-});
+{
+    "name": "9-api",
+    "version": "1.0.0",
+    "description": "A simple API for learning basic integration testing in NodeJS.",
+    "main": "api.js",
+    "author": "Bezaleel Olakunori <bezaleeloci@gmail.com>",
+    "private": true,
+    "license": "MIT",
+    "scripts": {
+        "test": "node ./node_modules/mocha/bin/mocha"
+    },
+    "dependencies": {
+        "express": "^4.17.1"
+    },
+    "devDependencies": {
+        "chai": "^4.2.0",
+        "mocha": "^6.2.2",
+        "request": "^2.88.0",
+        "sinon": "^7.5.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/B3zaleel/alx-backend-javascript"
+    },
+    "bugs": {
+        "url": "https://github.com/B3zaleel/alx-backend-javascript/issues"
+    },
+    "homepage": "https://github.com/B3zaleel/alx-backend-javascript/tree/main/0x06-unittests_in_js/9-api",
+    "engines": {
+        "node": "16.x",
+        "npm": "8.x",
+        "yarn": "1.x"
+    }
+}
